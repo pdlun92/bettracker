@@ -24,6 +24,7 @@ import {
 import styles from "./styles";
 import { Footer } from "./shared/Footer";
 import { Active } from "./pages/Active";
+import { History } from "./pages/History";
 
 // type Props = {};
 
@@ -56,7 +57,7 @@ export default class App extends Component {
               case 2:
                 return <Text>Page 2</Text>;
               case 3:
-                return <Text>Page 3</Text>;
+                return <History styles={styles} />;
               case 4:
                 return <Text>Page 4</Text>;
               default:
