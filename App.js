@@ -7,6 +7,8 @@
  */
 
 import React, { Component } from "react";
+// import shortid from "shortid";
+
 import {
   Platform,
   StyleSheet,
@@ -14,9 +16,12 @@ import {
   View,
   ScrollView,
   Alert,
-  FlatList
+  FlatList,
+  Image,
+  TouchableOpacity
 } from "react-native";
 
+import AsyncStorage from "@react-native-community/async-storage";
 import styles from "./styles";
 
 const instructions = Platform.select({
@@ -106,57 +111,49 @@ export default class App extends Component {
         </View>
 
         <View style={styles.footer}>
-          <View style={[styles.navitem, activePage === 1 && styles.activenav]}>
-            <Text
-              onPress={() => {
-                this.setState({
-                  activePage: 1
-                });
-              }}
-              style={styles.centertext}
-            >
-              A
-            </Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              this.setState({
+                activePage: 1
+              });
+            }}
+            style={[styles.navitem, activePage === 1 && styles.activenav]}
+          >
+            <Image source={require("./img/001-clock.png")} />
+          </TouchableOpacity>
 
-          <View style={[styles.navitem, activePage === 2 && styles.activenav]}>
-            <Text
-              onPress={() => {
-                this.setState({
-                  activePage: 2
-                });
-              }}
-              style={styles.centertext}
-            >
-              N
-            </Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              this.setState({
+                activePage: 2
+              });
+            }}
+            style={[styles.navitem, activePage === 2 && styles.activenav]}
+          >
+            <Image source={require("./img/008-add.png")} />
+          </TouchableOpacity>
 
-          <View style={[styles.navitem, activePage === 3 && styles.activenav]}>
-            <Text
-              onPress={() => {
-                this.setState({
-                  activePage: 3
-                });
-              }}
-              style={styles.centertext}
-            >
-              C
-            </Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              this.setState({
+                activePage: 3
+              });
+            }}
+            style={[styles.navitem, activePage === 3 && styles.activenav]}
+          >
+            <Image source={require("./img/002-ancient-scroll.png")} />
+          </TouchableOpacity>
 
-          <View style={[styles.navitem, activePage === 4 && styles.activenav]}>
-            <Text
-              onPress={() => {
-                this.setState({
-                  activePage: 4
-                });
-              }}
-              style={styles.centertext}
-            >
-              G
-            </Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              this.setState({
+                activePage: 4
+              });
+            }}
+            style={[styles.navitem, activePage === 4 && styles.activenav]}
+          >
+            <Image source={require("./img/006-bar-chart.png")} />
+          </TouchableOpacity>
         </View>
       </View>
     );
