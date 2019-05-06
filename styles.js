@@ -52,12 +52,14 @@ const styles = StyleSheet.create({
     padding: 5,
     justifyContent: "center",
     alignItems: "center",
-    flex: 1,
-    borderColor: "gray",
-    borderWidth: 1
+    flex: 1
   },
   activenav: {
-    borderTopColor: "red"
+    borderTopColor: "#28628F",
+    borderTopWidth: 3
+  },
+  activeimg: {
+    tintColor: "#28628F"
   },
   centertext: {
     padding: 20

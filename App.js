@@ -21,7 +21,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-import AsyncStorage from "@react-native-community/async-storage";
+// import AsyncStorage from "@react-native-community/async-storage";
 import styles from "./styles";
 
 const instructions = Platform.select({
@@ -107,7 +107,22 @@ export default class App extends Component {
         <View style={styles.container}>
           {/* <Text style={styles.instructions}>{instructions}</Text> */}
 
-          <ScrollView>{Bets}</ScrollView>
+          <ScrollView>
+            {(function() {
+              switch (activePage) {
+                case 1:
+                  return Bets;
+                case 2:
+                  return <Text>2</Text>;
+                case 3:
+                  return <Text>Page 3</Text>;
+                case 4:
+                  return <Text>Page 4</Text>;
+                default:
+                  return null;
+              }
+            })()}
+          </ScrollView>
         </View>
 
         <View style={styles.footer}>
@@ -119,7 +134,10 @@ export default class App extends Component {
             }}
             style={[styles.navitem, activePage === 1 && styles.activenav]}
           >
-            <Image source={require("./img/001-clock.png")} />
+            <Image
+              source={require("./img/001-clock.png")}
+              style={activePage === 1 && styles.activeimg}
+            />
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -130,7 +148,10 @@ export default class App extends Component {
             }}
             style={[styles.navitem, activePage === 2 && styles.activenav]}
           >
-            <Image source={require("./img/008-add.png")} />
+            <Image
+              source={require("./img/008-add.png")}
+              style={activePage === 2 && styles.activeimg}
+            />
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -141,7 +162,10 @@ export default class App extends Component {
             }}
             style={[styles.navitem, activePage === 3 && styles.activenav]}
           >
-            <Image source={require("./img/002-ancient-scroll.png")} />
+            <Image
+              source={require("./img/002-ancient-scroll.png")}
+              style={activePage === 3 && styles.activeimg}
+            />
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -152,7 +176,10 @@ export default class App extends Component {
             }}
             style={[styles.navitem, activePage === 4 && styles.activenav]}
           >
-            <Image source={require("./img/006-bar-chart.png")} />
+            <Image
+              source={require("./img/006-bar-chart.png")}
+              style={activePage === 4 && styles.activeimg}
+            />
           </TouchableOpacity>
         </View>
       </View>
