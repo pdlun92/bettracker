@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
   withLeftborder: {
     borderLeftColor: "gray",
     borderLeftWidth: 1
+  },
+  iconimg: {
+    width: 50,
+    height: 50
   }
 });
 
