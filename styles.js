@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1
   },
   iconimg: {
-    width: 50,
-    height: 50
+    width: 36,
+    height: 36
   }
 });
 

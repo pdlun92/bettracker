@@ -11,7 +11,7 @@ export const Footer = ({ styles, activePage, onUpdatePage }) => (
     >
       <Image
         source={require("../img/active.png")}
-        style={[activePage === 1 && styles.activeimg, {width: 54, height: 54}]}
+        style={[activePage === 1 && styles.activeimg, {width: 40, height: 40}]}
       />
     </TouchableOpacity>
 
