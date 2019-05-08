@@ -25,6 +25,7 @@ import styles from "./styles";
 import { Footer } from "./shared/Footer";
 import { Active } from "./pages/Active";
 import { Analyze } from "./pages/Analyze";
+import { History } from "./pages/History";
 
 // type Props = {};
 
@@ -35,7 +36,7 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      activePage: 4
+      activePage: 3
     };
   }
   render() {
@@ -57,7 +58,7 @@ export default class App extends Component {
               case 2:
                 return <Text>Page 2</Text>;
               case 3:
-                return <Text>Page 3</Text>;
+                return <History styles={styles} />;
               case 4:
                 return <Analyze />;
               default:

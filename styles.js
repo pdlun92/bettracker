@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
   betitem: {
-    height: 100,
+    height: 120,
     marginTop: 5,
     marginBottom: 10,
     margin: 5,
@@ -46,6 +46,15 @@ const styles = StyleSheet.create({
     shadowColor: "gray",
     shadowOffset: { height: 2, width: 2 },
     borderRadius: 10
+  },
+  betHead: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  betOdds: {
+    color: "red",
+    fontSize: 18,
+    fontWeight: "bold"
   },
   navitem: {
     margin: 5,
