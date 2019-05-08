@@ -59,7 +59,7 @@ export default class App extends Component {
               case 3:
                 return <Text>Page 3</Text>;
               case 4:
-                return <Analyze/>;
+                return <Analyze />;
               default:
                 return null;
             }
